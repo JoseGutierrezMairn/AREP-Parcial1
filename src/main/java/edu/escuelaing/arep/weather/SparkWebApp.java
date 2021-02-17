@@ -24,10 +24,14 @@ public class SparkWebApp
 	        get("/clima", (req, res) -> {
 	        	String city = req.queryParams("lugar");
 	            String json = "";
-	            if(city.length()==0){
-	                return "Por favor ingrese un lugar a buscar. Ejemplo : /clima?lugar=Bogota";
+	            if(city.length() > 0){
+	            	System.out.println(city);
+	            	json = aw.getWeatherByCity(city);
+	            }else {
+	            	System.out.println("Aqui papi");
+	            	return "Ingrese el lugar que quiere buscar. Ejemplo : /clima?lugar=London";
 	            }
-	            json = aw.getWeatherByCity(city);
+	            
 	            return gson.toJson(json);
 	        });
 	}

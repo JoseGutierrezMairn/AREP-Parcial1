@@ -6,6 +6,8 @@ En el desarrollo de parcial se debe crear un servidor web al cual se le enviará
 la URL, solicitando información del clima, la cual será retornada en un JSON haciendo uso del servicio   
 **Current weather Data**
 
+# Heroku
+[![Deploy](https://arepparcial1nicolasaguilerac.herokuapp.com/clima?lugar=bogota)  
 
 ## API key
 ~~~
